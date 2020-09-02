@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<Pane fx:id="pane" prefHeight="500.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <VBox fx:id="vbox" prefHeight="89.0" prefWidth="825.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="41.0" prefWidth="443.0" spacing="10.0">
+               <children>
+                  <Label prefHeight="27.0" prefWidth="70.0" text="数据文件：" />
+                  <TextField fx:id="text_fileName" prefHeight="27.0" prefWidth="195.0" />
+                  <Label fx:id="ana_res_label" textFill="#eb0725" />
+                  <Label text="采样间隔：" />
+                  <TextField fx:id="text_freq" />
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets right="30.0" />
+               </padding>
+            </HBox>
+            <HBox fx:id="hbox" alignment="CENTER" prefHeight="62.0" prefWidth="648.0" spacing="50.0">
+               <children>
+                  <Button fx:id="filechoose_btn" mnemonicParsing="false" onAction="#filechoose_btn_click" text="choose" />
+                  <Button fx:id="ana_btn" mnemonicParsing="false" onAction="#ana_btn_click" prefHeight="30.0" prefWidth="70.0" text="analyze" HBox.hgrow="ALWAYS" />
+                  <Button fx:id="generate_btn" mnemonicParsing="false" onAction="#generate_btn_click" prefHeight="30.0" prefWidth="70.0" text="generate" HBox.hgrow="ALWAYS" />
+                  <Button fx:id="clear_btn" mnemonicParsing="false" onAction="#clear_btn_click" prefHeight="30.0" prefWidth="70.0" text="clear" />
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+         </children>
+         <padding>
+            <Insets bottom="10.0" top="20.0" />
+         </padding>
+      </VBox>
+   </children>
+</Pane>
